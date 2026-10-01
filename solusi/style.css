@@ -1,0 +1,69 @@
+* { box-sizing: border-box; }
+
+body {
+  font-family: system-ui, sans-serif;
+  background: #f1f5f9;
+  color: #0f172a;
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 40px 16px;
+  transition: background 0.3s, color 0.3s;
+}
+
+body.gelap {
+  background: #0f172a;
+  color: #f1f5f9;
+}
+
+.kartu {
+  background: #ffffff;
+  width: 100%;
+  max-width: 480px;
+  padding: 24px;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+body.gelap .kartu { background: #1e293b; }
+
+h1 { margin: 0 0 4px; font-size: 1.5rem; }
+.sapaan { margin: 0 0 16px; color: #64748b; }
+
+form { display: flex; gap: 8px; }
+input[type="text"] {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+button {
+  padding: 10px 14px;
+  border: none;
+  border-radius: 8px;
+  background: #2563eb;
+  color: #fff;
+  font-size: 0.95rem;
+  cursor: pointer;
+}
+button:hover { background: #1d4ed8; }
+
+.pesan { color: #dc2626; min-height: 1.2em; margin: 8px 0; font-size: 0.9rem; }
+
+ul { list-style: none; padding: 0; margin: 0; }
+li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px;
+  border-bottom: 1px solid #e2e8f0;
+}
+li span { flex: 1; cursor: pointer; }
+li.selesai span { text-decoration: line-through; color: #94a3b8; }
+li button.hapus { background: #dc2626; padding: 6px 10px; }
+
+.ringkasan { margin-top: 12px; font-weight: 600; }
+.tema { margin-top: 16px; background: #475569; }
