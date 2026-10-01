@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="pageTitle">My Web Page</title>
+
+    <button id="myButton" onclick="helloworld()">Click Me</button>
+</head>
+<body>
+    <h1 id="titleBody">Welcome to My Web Page</h1>
+    <script>
+
+
+
+        console.log("Hello, World!");
+
+        let greeting = greet("Alice");
+        console.log(greeting);
+
+        // buat sample array of string berisi nama nama buah
+        let fruits = ["Pisang", "Semangka", "Mangga", "Kurma", "Strawberry"];
+        console.log(fruits);
+
+        fruits.forEach(function(fruit) {
+            console.log("Ini buah : " + fruit);
+        });
+
+        fruits.push("Apel");
+        console.log(fruits);
+
+        //ini contoh object student dengan property name dan major
+        let student = {
+            name: "John Doe",
+            major: "Computer Science"
+        }
+
+        console.log(student);
+
+        student.nama = "Jane Doe";
+        student.jurusan = "Mathematics";
+
+        // buat sample array of object untuk nama student isi nya nama dan jurusan
+        // contoh array of object
+        let students = [
+            { name: "Asep", major: "Computer Science" },
+            { name: "Wahyudi", major: "Mathematics" },
+            { name: "Budi", major: "Physics" }
+        ];
+
+        console.log(students[0].name);
+        console.log(students[1].name);
+        console.log(students[2].name);
+
+        students.forEach(function(student) {
+            console.log("Nama: " + student.name + ", Jurusan: " + student.major);
+        });
+
+        for(let i = 0; i < students.length; i++) {
+            console.log("Nama: " + students[i].name + ", Jurusan: " + students[i].major);
+        }
+
+        while(students.length > 0) {
+            let student = students.pop();
+            console.log("Nama: " + student.name + ", Jurusan: " + student.major);
+        }
+
+        console.log(students);
+
+
+        //helloworld();
+
+        console.log(sapa("Bob"));
+
+        function greet(name) {
+            return `Hello, ${name}!`;
+        }
+
+        // example of procedure
+        function helloworld() {
+            let pageTitle = document.getElementById("pageTitle");
+            pageTitle.title = "Hello, World!";
+        }
+
+        function farewell(name) {
+            console.log(`Goodbye, ${name}!`);
+        }
+
+        function sapa(name) {
+            return `Hi, ${name}!`;
+        }
+
+
+    </script>
+</body>
+</html>
